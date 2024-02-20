@@ -123,7 +123,7 @@ public class ExampleServlet2 extends HttpServlet{
 		
 		sb.append(String.format("<li>뼈/순살 : %s</li>", temp));
 		
-		if(options != null) { // 선택한 옵션이 있을 경우
+		if(options != null) {
 			sb.append("<li>");
 			sb.append("선택한 옵션 : ");
 			for(String opt : options)  sb.append(opt + " ");
@@ -144,6 +144,7 @@ public class ExampleServlet2 extends HttpServlet{
 		
 		out.print(sb.toString());
 		
+		System.out.println("주문완료");
 		
 	}
 	

@@ -15,15 +15,31 @@
 
     피자선택
     <select name="pizza">
-      <option value="">페페로니 피자</option>
-      <option value="">불고기 피자</option>
-      <option value="">베이컨 피자</option>
-      <option value=""></option>
-
+      <option value="페페로니">페페로니(20000)</option>
+      <option value="불고기">불고기(22000)</option>
+      <option value="베이컨">베이컨(23000)</option>
+      <option value="시카고">시카고(23000)</option>
     </select>
 
+    <br>
+
+    기본/치즈크러스트 :
+    기본 <input type="radio" name="type" value="basic"> /
+    치즈크러스트 (+2000) <input type="radio" name="type" value="cheez">
+    
+    <br>
+
+    기타옵션 : <br>
+
+    <input type="checkbox" name="opt" value="파마산치즈"> 파마산치즈(+1000) <br>
+    <input type="checkbox" name="opt" value="콜라"> 콜라(+2000) <br>
+    <input type="checkbox" name="opt" value="피클"> 피클(+500) <br>
 
 
+    주문자명 : <input type="text" name="ordererName"> <br>
+    주소 : <input type="text" name="ordererAddress"> <br>
+
+    <button>주문하기</button>
 
   </form>
 
