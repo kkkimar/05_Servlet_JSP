@@ -29,7 +29,6 @@ public class PizzaOrderServlet extends HttpServlet{
 		//Attribute(속성) == 객체의 속성 == 변수(필드)
 		req.setAttribute("myName", myName);
 		
-	
 		
 		// pizza_order.jsp가 응답 화면을 대신 만들어 출력할 수 있도록
 		// HttpServletRequest, HttpServletResponse 를 요청 위임(forward)
