@@ -50,7 +50,7 @@ public class TodoAddServlet extends HttpServlet{
 			
 			// 5. 메인 페이지로 redirect
 			resp.sendRedirect("/"); // index.jsp -> /main -> main.jsp
-			
+				
 			
 			
 		}catch (Exception e) {

@@ -46,6 +46,8 @@ public class MainServlet extends HttpServlet {
 			
 			String path = "/WEB-INF/views/main.jsp";
 			req.getRequestDispatcher(path).forward(req, resp);
+			// "/" -> index.jsp -> "/main" -> main.jsp
+			
 			
 		}catch(Exception e) {
 			e.printStackTrace();

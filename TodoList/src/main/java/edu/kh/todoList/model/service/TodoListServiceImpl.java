@@ -20,9 +20,9 @@ public class TodoListServiceImpl implements TodoListService {
 	
 	// 기본 생성자
 	public TodoListServiceImpl() throws FileNotFoundException, IOException, ClassNotFoundException {
-		// todoListServiceImpl 객체가  생성 될 때
+		// TodoListServiceImpl 객체가  생성 될 때
 		
-		dao = new TodoListDAOImpl(); // todoListDaoImpl 객체 생성
+		dao = new TodoListDAOImpl(); // TodoListDaoImpl 객체 생성
 		
 		
 	}
@@ -76,14 +76,30 @@ public class TodoListServiceImpl implements TodoListService {
 
 	
 	@Override
-	public Todo todoDetailView(int index) {
+	public String todoDetailView(int index) {
 		
-		//   DAO에 있는 todoList에서 index번째 요소(Todo) 반환 받기
+		//1. DAO에 있는 todoList에서 index번째 요소(Todo) 반환 받기
 		//	 없으면 null 반환
 		
 		Todo todo = dao.todoDetailView(index);
 		
-		return todo;
+		//2. 반환 받은 todo가 null인 경우 null반환
+		if(todo == null) return null;
+		
+		//3. Todo가 참조하는 객체가 있다면 문자열 가공
+		
+		StringBuilder sb = new StringBuilder(); 
+		
+		sb.append("--------------------------------------------\n");
+		sb.append( String.format("제목 : %s\n", todo.getTitle()) );
+		sb.append( String.format("등록일 : %s\n", dateFormat(todo.getRegDate())) );		
+		sb.append( String.format("완료여부 : %s\n", todo.isComplete() ? "O" : "X") );
+		sb.append("\n[세부 내용]\n");
+		sb.append("--------------------------------------------\n");
+		sb.append( String.format("%s\n", todo.getDetail()) );
+		
+		//4. 가공한 문자열 반환
+		return sb.toString();
 	}
 
 	@Override

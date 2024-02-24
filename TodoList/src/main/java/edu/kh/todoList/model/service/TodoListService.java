@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.Map;
 
-import edu.kh.todoList.model.dto.Todo;
-
 /**
  * Service
  * - 데이터 가공, 로직 처리 등의 기능을 제공하는 역할
@@ -32,9 +30,9 @@ public interface TodoListService {
 
 	/** 전달 받은 index 번째 todo를 반환
 	 * @param index
-	 * @return index 번째 todo, 없으면 null 반환
+	 * @return index 번째 todo 상세 정보, 없으면 null 반환
 	 */
-	public abstract Todo todoDetailView(int index);
+	public abstract String todoDetailView(int index);
 
 
 

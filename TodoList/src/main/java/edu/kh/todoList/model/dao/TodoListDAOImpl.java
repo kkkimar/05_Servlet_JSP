@@ -29,7 +29,7 @@ public class TodoListDAOImpl implements TodoListDao{
 	// 기본생성자
 	public TodoListDAOImpl() throws FileNotFoundException, IOException, ClassNotFoundException {
 		
-		// 객체 생성 시 todoList.dat 파일 내용 읽어오기
+		// 객체 생성 시 TodoList.dat 파일 내용 읽어오기
 		// -> 읽어오기 전에 있는지 검사부터!
 		
 		File file = new File(FILE_PATH);
@@ -83,7 +83,7 @@ public class TodoListDAOImpl implements TodoListDao{
 			
 		}
 		
-		System.out.println("***********todoList.dat 파일 생성 완료*****************");
+		System.out.println("***********TodoList.dat 파일 생성 완료*****************");
 		
 		
 	}

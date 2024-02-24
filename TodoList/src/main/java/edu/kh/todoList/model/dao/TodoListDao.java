@@ -14,7 +14,7 @@ public interface TodoListDao {
 
 	// public abstract를 명시하지 않아도 public abstract으로 해석됨!!
 
-	/** todoList를 파일로 저장하는 메서드
+	/** TodoList를 파일로 저장하는 메서드
 	 * @throws FileNotFoundException
 	 * @throws IOException
 	 */
