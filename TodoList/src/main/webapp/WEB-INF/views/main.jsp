@@ -93,8 +93,7 @@
 	<%-- session scope에 message 속성이 있다면 --%>
 	<c:if test="${ not empty sessionScope.message }">
 		<script>
-			// EL을 이용해서 String을 출력
-			할 때 꼭 양쪽에 "" 추가하기!!
+			// EL을 이용해서 String을 출력할 때 꼭 양쪽에 "" 추가하기!!
 			const message = "${message}"; 
 			alert(message);
 		</script>

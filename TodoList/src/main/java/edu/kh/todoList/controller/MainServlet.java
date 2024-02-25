@@ -37,7 +37,7 @@ public class MainServlet extends HttpServlet {
 			Map<String, Object> map = service.todoListFullView();
 			
 			// map에 저장된 값 풀어내기
-			List<Todo> todoList = (List<Todo>)map.get("todoList");
+			List<Todo> todoList = (List<Todo>)map.get("todoList"); //-> 다운캐스팅
 			int completeCount = (int)map.get("completeCount");
 			
 			// request 객체에 service에서 얻어온 값을 속성으로 추가
